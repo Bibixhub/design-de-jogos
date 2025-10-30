@@ -1,0 +1,204 @@
+/* Definição das variáveis de cores pastel */
+:root {
+    --rosa-pastel: #FFB6C1; /* LightPink */
+    --roxo-pastel: #B19CD9; /* Roxo Pastel Suave */
+    --fundo-suave: #FFFAFA; /* Snow (Fundo quase branco) */
+    --texto-escuro: #4c4c4c;
+    --gradiente-hero: linear-gradient(135deg, var(--roxo-pastel) 0%, var(--rosa-pastel) 100%);
+    --sombra-card: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--fundo-suave);
+    color: var(--texto-escuro);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* --- Cabeçalho e Navegação --- */
+header {
+    background-color: var(--roxo-pastel);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    margin: 0 5px;
+    display: block;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    position: relative;
+    font-weight: 500;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* --- Seção de Destaque (Hero) --- */
+.hero {
+    background: var(--gradiente-hero);
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero p {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: white;
+    color: var(--roxo-pastel);
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn-cta:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+/* --- Seção de Jogos em Destaque --- */
+.jogos-destaques {
+    text-align: center;
+    padding: 20px 5%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.jogos-destaques h2 {
+    color: var(--roxo-pastel);
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jogos-destaques h2 i {
+    color: var(--rosa-pastel);
+    margin-right: 15px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.jogo-card {
+    background-color: white;
+    width: 300px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: var(--sombra-card);
+    text-align: center;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s;
+    border-top: 5px solid var(--rosa-pastel);
+    cursor: pointer;
+}
+
+.jogo-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+    font-size: 2.5em;
+    color: var(--roxo-pastel);
+    margin-bottom: 10px;
+}
+
+.jogo-card h3 {
+    color: var(--roxo-pastel);
+    margin-top: 5px;
+    font-size: 1.5em;
+}
+
+.jogo-card p {
+    font-size: 0.95em;
+    color: var(--texto-escuro);
+    margin-bottom: 20px;
+}
+
+.btn-saiba-mais {
+    background-color: var(--rosa-pastel);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.btn-saiba-mais:hover {
+    background-color: #FF87A6; /* Rosa mais vibrante no hover */
+}
+
+/* --- Rodapé --- */
+footer {
+    background-color: var(--roxo-pastel);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* --- Seção de Conteúdo Geral (para Sobre e Contato) --- */
+.content-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--sombra-card);
+}
+
+.content-section h1 {
+    color: var(--roxo-pastel);
+    border-bottom: 3px solid var(--rosa-pastel);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}

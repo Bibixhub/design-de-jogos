@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameDesign Studio - Fale Conosco</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🎮 **GameDesign Studio**</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html" class="active">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <h1><i class="fas fa-envelope"></i> Fale Conosco</h1>
+            <p>Quer sugerir uma análise, colaborar ou apenas enviar um feedback? Estamos ansiosos para ouvir você!</p>
+
+            <form action="#" method="POST" class="form-contato">
+                <div class="form-grupo">
+                    <label for="nome"><i class="fas fa-user"></i> Seu Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-grupo">
+                    <label for="email"><i class="fas fa-at"></i> Seu Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-grupo">
+                    <label for="assunto"><i class="fas fa-tag"></i> Assunto:</label>
+                    <select id="assunto" name="assunto">
+                        <option value="sugestao">Sugestão de Jogo</option>
+                        <option value="colaboracao">Colaboração</option>
+                        <option value="outros">Outro Assunto</option>
+                    </select>
+                </div>
+                <div class="form-grupo">
+                    <label for="mensagem"><i class="fas fa-comment-dots"></i> Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="btn-enviar"><i class="fas fa-paper-plane"></i> Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 GameDesign Studio. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<style>
+/* Adicionado no final do style.css para o formulário */
+.form-contato {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    border: 1px solid var(--rosa-pastel);
+    border-radius: 10px;
+    background-color: var(--fundo-suave);
+}
+
+.form-grupo {
+    margin-bottom: 20px;
+}
+
+.form-grupo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--roxo-pastel);
+}
+
+.form-contato input[type="text"],
+.form-contato input[type="email"],
+.form-contato select,
+.form-contato textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-contato input:focus,
+.form-contato select:focus,
+.form-contato textarea:focus {
+    border-color: var(--rosa-pastel);
+    box-shadow: 0 0 5px rgba(255, 182, 193, 0.5); /* Sombra suave de foco */
+    outline: none;
+}
+
+.btn-enviar {
+    background-color: var(--roxo-pastel);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-enviar:hover {
+    background-color: #9878c7;
+    transform: translateY(-2px);
+}
+</style>
